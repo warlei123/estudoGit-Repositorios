@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="greet" style="font-size: 50px; font-family: 'Lucida Sans'; text-align: center;">Bem vindo</div>
+    <div id="time" style="font-size: 50px; font-family: 'Lucida Sans'; text-align: center;"></div>
+</body>
+<script>
+
+    var time = new Date()
+
+   var data  = function (){
+        var day = time.getDate()
+        var month = time.getMonth()
+        var monthName = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+        var year = time.getFullYear()
+        var hours = time.getHours()
+        var minutes = time.getMinutes()
+        if (minutes < 10){
+            minutes = "0" + minutes
+        }
+        document.getElementById("time").innerHTML = `${day} de ${monthName[month]} de ${year} - ${hours}:${minutes}`
+    }
+
+data()
+    
+
+</script>
+</html>
